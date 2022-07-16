@@ -1,0 +1,3 @@
+/*! For license information please see app.bundle.js.LICENSE.txt */
+(self.webpackChunkleaderboard_v1_p1=self.webpackChunkleaderboard_v1_p1||[]).push([["app"],{"./modules/app.js":()=>{console.log(12)}},e=>{e(e.s="./modules/app.js")}]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmJ1bmRsZS5qcyIsIm1hcHBpbmdzIjoiO21IQUVBQSxRQUFRQyxJQURFIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbGVhZGVyYm9hcmQtdjFfcDEvLi9tb2R1bGVzL2FwcC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBBcnJvdyBmdW5jdGlvbiB3aXRoIGFuIGFsZXJ0IEhlbGxvXG5jb25zdCBhID0gMTI7XG5jb25zb2xlLmxvZyhhKTsiXSwibmFtZXMiOlsiY29uc29sZSIsImxvZyJdLCJzb3VyY2VSb290IjoiIn0=
