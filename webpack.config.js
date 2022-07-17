@@ -1,7 +1,8 @@
+const zlib = require('zlib');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const zlib = require('zlib');
 
 module.exports = {
   mode: 'development',
@@ -14,7 +15,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    port: 3001,
+    port: 3000,
     open: true,
     hot: true,
     compress: true,
@@ -25,6 +26,7 @@ module.exports = {
       template: './src/index.html',
       favicon: './src/favicon.png',
     }),
+    new DashboardPlugin({ port: 3001 }),
     new CompressionPlugin({
       filename: '[path][base].gz',
       algorithm: 'gzip',

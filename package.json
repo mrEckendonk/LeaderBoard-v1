@@ -5,9 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "watch": "webpack --watch",
-    "start": "webpack serve --open",
-    "build": "webpack",
+    "watch": "webpack-dashboard -- webpack --watch",
+    "start": "webpack-dashboard -- webpack serve --open",
+    "build": "webpack-dashboard -- webpack",
     "test": "jest --env=jsdom",
     "compile:sass": "sass scss:assets/css"
   },
@@ -45,6 +45,7 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
+    "webpack-dashboard": "^3.3.7",
     "webpack-dev-middleware": "^5.3.3",
     "webpack-dev-server": "^4.9.3",
     "webpack-hot-middleware": "^2.25.1"

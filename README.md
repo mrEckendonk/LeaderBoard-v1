@@ -3,8 +3,9 @@
 The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service. This was an educational project with the Microverse bootcamp.
 
 # Screen Shots
-## Built With &hearts;
+![Screen Shot](./Leaderboard.png)
 
+## Built With &hearts;
 - HTML
 - CSS
 - JavaScript
@@ -13,7 +14,7 @@ The leaderboard website displays scores submitted by different players. It also 
 - Git & GitHub
 ## Live Demo
 
-[Live Demo Link](leaderboard-v1.netlify.app)
+[Live Demo Link]([leaderboard-v1.netlify.app](https://leaderboard-v1.netlify.app/))
 
 ### Prerequisites
 have a working git on your localmachine.

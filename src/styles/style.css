@@ -14,3 +14,7 @@ body {
 ul {
   list-style: none;
 }
+
+ul > :nth-child(even) {
+  background: rgb(238, 238, 238);
+}
