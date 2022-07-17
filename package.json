@@ -7,7 +7,7 @@
   "scripts": {
     "watch": "webpack-dashboard -- webpack --watch",
     "start": "webpack-dashboard -- webpack serve --open",
-    "build": "webpack-dashboard -- webpack",
+    "build": "webpack",
     "test": "jest --env=jsdom",
     "compile:sass": "sass scss:assets/css"
   },

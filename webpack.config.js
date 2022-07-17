@@ -1,8 +1,8 @@
-// const zlib = require('zlib');
+const zlib = require('zlib');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
-// const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -27,26 +27,26 @@ module.exports = {
       favicon: './src/favicon.png',
     }),
     new DashboardPlugin({ port: 3001 }),
-    // new CompressionPlugin({
-    //   filename: '[path][base].gz',
-    //   algorithm: 'gzip',
-    //   test: /\.js$|\.css$|\.html$/,
-    //   threshold: 10240,
-    //   minRatio: 0.8,
-    // }),
-    // new CompressionPlugin({
-    //   filename: '[path][base].br',
-    //   algorithm: 'brotliCompress',
-    //   test: /\.(js|css|html|svg)$/,
-    //   compressionOptions: {
-    //     params: {
-    //       [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
-    //     },
-    //   },
-    //   threshold: 10240,
-    //   minRatio: 0.8,
-    //   deleteOriginalAssets: false,
-    // }),
+    new CompressionPlugin({
+      filename: '[path][base].gz',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+    new CompressionPlugin({
+      filename: '[path][base].br',
+      algorithm: 'brotliCompress',
+      test: /\.(js|css|html|svg)$/,
+      compressionOptions: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+        },
+      },
+      threshold: 10240,
+      minRatio: 0.8,
+      deleteOriginalAssets: false,
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
