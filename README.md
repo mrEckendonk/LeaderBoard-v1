@@ -14,7 +14,7 @@ The leaderboard website displays scores submitted by different players. It also 
 - Git & GitHub
 ## Live Demo
 
-[Live Demo Link]([leaderboard-v1.netlify.app](https://leaderboard-v1.netlify.app/))
+[Live Demo Link](https://leaderboard-v1.netlify.app/)
 
 ### Prerequisites
 have a working git on your localmachine.
