@@ -1,4 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/77596222-ecd0-4cbb-937e-a9718f843da7/deploy-status)](https://app.netlify.com/sites/leaderboard-v1/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/77596222-ecd0-4cbb-937e-a9718f843da7/deploy-status)](https://app.netlify.com/sites/leaderboard-v1/deploys) 
+![Size](https://github-size-badge.herokuapp.com/mrEckendonk/LeaderBoard-v1.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 # LeaderBoard-v1 Project
 The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service. This was an educational project with the Microverse bootcamp.
 
