@@ -8,6 +8,7 @@
     "watch": "webpack-dashboard -- webpack --watch",
     "start": "webpack-dashboard -- webpack serve --open",
     "build": "webpack",
+    "deploy": "gh-pages -d dist",
     "test": "jest --env=jsdom",
     "compile:sass": "sass scss:assets/css"
   },
@@ -33,6 +34,7 @@
     "eslint-plugin-lodash": "^7.4.0",
     "express": "^4.18.1",
     "gh-pages": "^4.0.0",
+    "hint": "^7.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mkdirp": "^1.0.4",
     "sass": "^1.53.0",
