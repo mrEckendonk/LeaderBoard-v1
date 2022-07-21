@@ -1,15 +1,15 @@
 import Score from './helpers/constructor';
+import getScoreAndName from './API/getAPI';
+import postScoreAndName from './API/postAPI';
 
-const scores = [];
-
-const addScores = () => {
+const addScores = async () => {
   const scoreList = document.querySelector('.score-list');
+  const scores = await getScoreAndName().then((result) => result);
   if (scores.length !== 0) {
-    scores.sort((a, b) => b.score - a.score);
     scoreList.innerHTML = '';
-    scores.forEach((item) => {
+    scores.result.forEach((item) => {
       const score = `
-      <li class="h4 p-2 m-0">${item.name}: ${item.score}</li>
+      <li class="h4 p-2 m-0">${item.user}: ${item.score}</li>
       `;
       scoreList.insertAdjacentHTML('beforeend', score);
     });
@@ -19,30 +19,18 @@ const addScores = () => {
 const refresh = () => {
   const refresh = document.querySelector('.refresh');
   refresh.addEventListener('click', () => {
-    if (scores.length !== 0) {
-      refresh.insertAdjacentHTML('afterbegin', `
-        <div class="alert alert-success m-0">
-          The page will be refreshed.
-        </div>
-      `);
-      setTimeout(() => {
-        document.querySelector('.alert').remove();
-      }, 3000);
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
-    }
+    window.location.reload();
   });
 };
 
 const addScore = () => {
   const form = document.querySelector('form');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const { name, score } = form.elements;
-    if (!/^[a-zA-Z\s/.]+$/.test(name.value)) {
+    const { user, score } = form.elements;
+    if (!/^[a-zA-Z\s/.]+$/.test(user.value)) {
       form.insertAdjacentHTML('afterend', `
-        <div class="alert alert-danger">
+        <div class="alert alert-danger Helvetica Neue">
           <strong>Error!</strong> Name can contain only letters.
         </div>
       `);
@@ -67,11 +55,11 @@ const addScore = () => {
       setTimeout(() => {
         document.querySelector('.alert').remove();
       }, 3000);
-      scores.push(new Score(name.value, score.value));
     }
-    name.value = '';
+    const addScore = new Score(user.value, score.value);
+    await postScoreAndName(addScore);
+    user.value = '';
     score.value = '';
-    addScores();
   });
 };
 

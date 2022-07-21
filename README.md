@@ -5,7 +5,11 @@
 The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service. This was an educational project with the Microverse bootcamp.
 
 # Screen Shots
-![Screen Shot](./Leaderboard.png)
+Wireframe:
+![Screen Shot WireFrame](./Leaderboard.png)
+
+Styled with Bootstrap:
+![Screen Shot With Styling](./Leaderboard_1.png)
 
 ## Built With &hearts;
 - HTML
