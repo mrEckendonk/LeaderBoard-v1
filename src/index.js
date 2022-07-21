@@ -3,3 +3,4 @@ import _ from 'lodash';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css';
+import './assets/stadium.jpg';

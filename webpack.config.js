@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -15,7 +16,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    port: 3000,
+    // port: 3000,
     open: true,
     hot: true,
     compress: true,
@@ -26,6 +27,7 @@ module.exports = {
       template: './src/index.html',
       favicon: './src/favicon.png',
     }),
+    new MiniCssExtractPlugin(),
     new DashboardPlugin({ port: 3001 }),
     new CompressionPlugin({
       filename: '[path][base].gz',
@@ -60,12 +62,32 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.s?css$/i,
+        use: [
+          // Save the CSS as a separate file to allow caching
+          MiniCssExtractPlugin.loader,
+          {
+            // Translate CSS into CommonJS modules
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                outputStyle: 'compressed',
+              },
+            },
+          },
+        ],
       },
       {
-        test: /\.(woff|woff2|eot|ttf)$/,
+        // test: /\.(woff|woff2|eot|ttf)$/,
+        test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/i,
         type: 'asset/resource',
+        generator: {
+          // filename: 'fonts/[name]-[hash][ext][query]'
+          filename: 'fonts/[name][ext][query]',
+        },
         use: {
           loader: 'url-loader',
           options: {
@@ -74,12 +96,14 @@ module.exports = {
         },
       },
       {
-        test: /\.(svg|jpg|png)$/i,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         type: 'asset/resource',
         use: {
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
-            limit: 8192,
+            // limit: 8192,
+            name: '[name].[ext]',
+            outputPath: 'assets/images/',
             mimetype: 'image/png',
             encoding: true,
           },

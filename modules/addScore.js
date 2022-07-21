@@ -30,7 +30,7 @@ const addScore = () => {
     const { user, score } = form.elements;
     if (!/^[a-zA-Z\s/.]+$/.test(user.value)) {
       form.insertAdjacentHTML('afterend', `
-        <div class="alert alert-danger">
+        <div class="alert alert-danger Helvetica Neue">
           <strong>Error!</strong> Name can contain only letters.
         </div>
       `);

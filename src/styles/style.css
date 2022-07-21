@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Open+Sans:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +7,31 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: normal;
-  background: rgb(255, 254, 254);
+  color: rgb(177, 84, 84);
+  font-family: 'Faster One', Arial, Helvetica, sans-serif;
+  background-image: url(https://live.staticflickr.com/65535/52229917076_090357ac32_h.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 ul {
   list-style: none;
+  color: rgb(231, 208, 208);
+  background: rgb(150, 119, 119);
 }
 
 ul > :nth-child(even) {
+  color: brown;
   background: rgb(238, 238, 238);
+}
+
+footer {
+  font-size: 36px;
+  position: fixed;
+  text-align: center;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
 }
