@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack'); // only add this if you don't have yet
+
+// replace accordingly './.env' with the path of your .env file
+require('dotenv').config({ path: './.env.local' });
 
 module.exports = {
   mode: 'development',
@@ -50,7 +54,10 @@ module.exports = {
       minRatio: 0.8,
       deleteOriginalAssets: false,
     }),
-    new Dotenv(),
+
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
