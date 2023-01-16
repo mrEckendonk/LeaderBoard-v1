@@ -1,4 +1,4 @@
-const urlAPI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
-const gameIdAPI = 'uwB8nJdet2WNjIhayB6j';
+const urlAPI = process.env.URL_API;
+const gameIdAPI = process.env.GAME_ID;
 
 export { urlAPI, gameIdAPI };
