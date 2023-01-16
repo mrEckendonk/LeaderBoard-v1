@@ -1,4 +1,4 @@
 .vscode
 node_modules
-.env
-.idea
+.env.local
+.idea!/.env
