@@ -25,42 +25,56 @@ const refresh = () => {
 
 const addScore = () => {
   const form = document.querySelector('form');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const { user, score } = form.elements;
-    if (!/^[a-zA-Z\s/.]+$/.test(user.value)) {
-      form.insertAdjacentHTML('afterend', `
+  form.addEventListener('submit',
+    async (e) => {
+      e.preventDefault();
+      const {
+        user,
+        score,
+      } = form.elements;
+      if (!/^[a-zA-Z ]+$/.test(user.value)) {
+        form.insertAdjacentHTML('afterend', `
         <div class="alert alert-danger Helvetica Neue">
           <strong>Error!</strong> Name can contain only letters.
         </div>
       `);
-      setTimeout(() => {
-        document.querySelector('.alert').remove();
-      }, 3000);
-    } else if (/^[a-zA-Z]+$/.test(score.value)) {
-      form.insertAdjacentHTML('afterend', `
+        setTimeout(() => {
+          document.querySelector('.alert')
+            .remove();
+        }, 3000);
+        user.value = '';
+        user.focus();
+        return;
+      }
+      if (/^[a-zA-Z]+$/.test(score.value)) {
+        form.insertAdjacentHTML('afterend', `
         <div class="alert alert-danger">
           <strong>Error!</strong> Score must be a number.
         </div>
       `);
-      setTimeout(() => {
-        document.querySelector('.alert').remove();
-      }, 3000);
-    } else {
+        setTimeout(() => {
+          document.querySelector('.alert')
+            .remove();
+        }, 3000);
+        score.value = '';
+        score.focus();
+        return;
+      }
       form.insertAdjacentHTML('afterend', `
         <div class="alert alert-success">
-          <strong>Success!</strong> Score was added and sorted by score.
+          <strong>Success!</strong> Score added and sorted by score.
         </div>
       `);
       setTimeout(() => {
-        document.querySelector('.alert').remove();
+        document.querySelector('.alert')
+          .remove();
       }, 3000);
-    }
-    const addScore = new Score(user.value, score.value);
-    await postScoreAndName(addScore);
-    user.value = '';
-    score.value = '';
-  });
+
+      const addScore = new Score(user.value, score.value);
+      await postScoreAndName(addScore);
+      user.value = '';
+      score.value = '';
+    });
 };
 
 export { addScore, addScores, refresh };
