@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -49,6 +50,7 @@ module.exports = {
       minRatio: 0.8,
       deleteOriginalAssets: false,
     }),
+    new Dotenv(),
   ],
   output: {
     filename: '[name].bundle.js',
