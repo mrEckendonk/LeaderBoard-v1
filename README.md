@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/77596222-ecd0-4cbb-937e-a9718f843da7/deploy-status)](https://app.netlify.com/sites/leaderboard-v1/deploys) 
-![Size](https://github-size-badge.herokuapp.com/mrEckendonk/LeaderBoard-v1.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 # LeaderBoard-v1 Project
@@ -17,23 +15,28 @@ Styled with Bootstrap:
 - CSS
 - JavaScript
 - Webpack
-- VScode
+- WebStorm - IDE
 - Git & GitHub
+
 ## Live Demo
 
-[Live Demo Link](https://leaderboard-v1.netlify.app/)
+[Live Demo Link](https://leaderboard.xoommit.com/)
 
 ### Prerequisites
-have a working git on your localmachine.
+
+have a working git on your local-machine.
+
 ## Install
+
 To get a working local copy up and running follow these simple steps
+
 - open terminal
 - clone this project with the command:
-
 
 ```
 $ git clone https://github.com/mrEckendonk/leaderboard-v1.git
 ```
+
 - Finally, run the next command in the terminal to install dependencies:
 
 ```
