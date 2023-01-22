@@ -1,10 +1,7 @@
-const zlib = require('zlib');
+// const lib = require('zlib');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const Dotenv = require('dotenv-webpack');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack'); // only add this if you don't have yet
 
 // replace accordingly './.env' with the path of your .env file
@@ -16,15 +13,20 @@ module.exports = {
     index: './src/index.js',
     app: './modules/app.js',
   },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
+    clean: true,
+  },
   devtool: 'inline-source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    // port: 3000,
     open: true,
     hot: true,
     compress: true,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -32,62 +34,17 @@ module.exports = {
       template: './src/index.html',
       favicon: './src/favicon.png',
     }),
-    new MiniCssExtractPlugin(),
-    new DashboardPlugin({ port: 3001 }),
-    new CompressionPlugin({
-      filename: '[path][base].gz',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
-    new CompressionPlugin({
-      filename: '[path][base].br',
-      algorithm: 'brotliCompress',
-      test: /\.(js|css|html|svg)$/,
-      compressionOptions: {
-        params: {
-          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
-        },
-      },
-      threshold: 10240,
-      minRatio: 0.8,
-      deleteOriginalAssets: false,
-    }),
 
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(process.env),
     }),
   ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-  },
-  optimization: {
-    runtimeChunk: 'single',
-    minimize: true,
-  },
   module: {
     rules: [
       {
-        test: /\.s?css$/i,
-        use: [
-          // Save the CSS as a separate file to allow caching
-          MiniCssExtractPlugin.loader,
-          {
-            // Translate CSS into CommonJS modules
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sassOptions: {
-                outputStyle: 'compressed',
-              },
-            },
-          },
-        ],
+        test: /\.css$/i,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         // test: /\.(woff|woff2|eot|ttf)$/,
@@ -119,8 +76,5 @@ module.exports = {
         },
       },
     ],
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx'],
   },
 };

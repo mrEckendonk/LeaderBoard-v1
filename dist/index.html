@@ -2,31 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Leaderboard</title>
-  <link rel="icon" href="favicon.png"><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="app.bundle.js"></script><link href="index.css" rel="stylesheet"></head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="icon" href="favicon.png"><script defer src="index.bundle.js"></script><script defer src="app.bundle.js"></script></head>
   <body>
-    <main class="container-sm">
-      <h1 class="display-1 mt-5">Leaderboard</h1>
-      <div class="row p-3 ms-5">
-        <section class="col pe-5 sort">
-          <div class="d-flex align-items-center justify-content-between">
-            <h3 class="display-6">Recent Scores</h3>
-            <button type="submit" class="refresh h4 p-2 align-self-end border-dark border-5">Refresh
+    <main class="container mx-auto">
+      <h1 class="text-4xl font-medium text-center mt-5">Leaderboard</h1>
+      <div class="flex p-3 mx-5">
+        <section class="w-1/2 p-5 sort">
+          <div class="flex justify-between">
+            <h3 class="text-xl font-medium">Recent Scores</h3>
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg refresh"
+              type="submit"
+            >
+              Refresh
             </button>
           </div>
 
-          <ul class="score-list border border-dark border-5 m-0 p-0 sort-desecending"></ul>
-
+          <ul class="border border-blue-500 rounded-lg m-0 p-0 score-list sort-desecending"></ul>
         </section>
-        <section class="col px-5 add-scores">
-          <h3 class="display-5">Add your score</h3>
-          <form class="d-flex flex-column align-items-start justify-content-center">
-            <label for="player" class="display-5"></label>
-            <input type="text" class="h4 p-2 mb-4 w-100 border-dark border-5" id="user" placeholder="Your name" required/>
-            <input type="text" class="h4 p-2 mb-4 w-100 border-dark border-5" id="score" placeholder="Your score" required/>
-              <button type="submit" class="submit h4 p-2 align-self-end border-dark border-5 shadow-sm" >Submit</button>
+        <section class="w-1/2 px-5 add-scores">
+          <h3 class="text-lg font-medium">Add your score</h3>
+          <form class="flex flex-col items-start justify-center">
+            <label class="text-lg font-medium" for="user"></label>
+            <input
+              class="bg-gray-200 rounded-lg p-2 mb-4 w-full"
+              id="user"
+              placeholder="Your name"
+              required
+              type="text"
+            />
+            <input
+              class="bg-gray-200 rounded-lg p-2 mb-4 w-full"
+              id="score"
+              placeholder="Your score"
+              required
+              type="text"
+            />
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg submit"
+              type="submit"
+            >
+              Submit
+            </button>
           </form>
         </section>
       </div>

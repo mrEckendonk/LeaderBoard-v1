@@ -1,7 +1,6 @@
-import { addScores, addScore, refresh } from './addScore';
+import { addScore, addScores, refresh } from './addScore';
 
-addScores()
-  .then(() => {
-    addScore();
-    refresh();
-  });
+addScores().then(() => {
+  addScore();
+  refresh();
+});

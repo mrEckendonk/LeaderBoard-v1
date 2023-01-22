@@ -1,4 +1,4 @@
-import { urlAPI, gameIdAPI } from './API_Data';
+import { gameIdAPI, urlAPI } from './API_Data';
 
 const postScoreAndName = async (addScore) => {
   const score = fetch(`${urlAPI}/${gameIdAPI}/scores/`, {
