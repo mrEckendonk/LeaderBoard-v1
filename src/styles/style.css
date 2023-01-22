@@ -1,37 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Open+Sans:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*noinspection CssUnknownTarget*/
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-size: 16px;
-  font-weight: normal;
+  background-image: url(https://live.staticflickr.com/65535/52229917076_090357ac32_h.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   color: rgb(177, 84, 84);
   font-family: 'Faster One', Arial, Helvetica, sans-serif;
-  background-image: url(https://live.staticflickr.com/65535/52229917076_090357ac32_h.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 ul {
-  list-style: none;
-  color: rgb(231, 208, 208);
   background: rgb(150, 119, 119);
+  color: rgb(231, 208, 208);
+  list-style: none;
 }
 
 ul > :nth-child(even) {
-  color: brown;
   background: rgb(238, 238, 238);
+  color: brown;
 }
 
 footer {
+  bottom: 0;
   font-size: 36px;
+  height: 100px;
   position: fixed;
   text-align: center;
-  height: 100px;
-  bottom: 0;
   width: 100%;
 }
