@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*noinspection CssUnknownTarget*/
+/* noinspection CssUnknownTarget */
 
 * {
   box-sizing: border-box;
