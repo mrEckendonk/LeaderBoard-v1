@@ -289,7 +289,7 @@
     "postcss-value-parser": "^4.2.0",
     "prelude-ls": "^1.2.1",
     "progress": "^2.0.3",
-    "punycode": "^2.1.1",
+    "punycode": "^2.3.0",
     "queue-microtask": "^1.2.3",
     "quick-lru": "^4.0.1",
     "read-pkg": "^5.2.0",
