@@ -12,7 +12,7 @@ Styled with Bootstrap:
 
 ## Built With &hearts;
 - HTML
-- CSS
+- TailWind CSS
 - JavaScript
 - Webpack
 - WebStorm - IDE
