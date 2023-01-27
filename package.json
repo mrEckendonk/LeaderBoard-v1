@@ -304,7 +304,7 @@
     "resolve": "^1.22.1",
     "resolve-from": "^4.0.0",
     "reusify": "^1.0.4",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.1.2",
     "run-parallel": "^1.2.0",
     "safe-buffer": "^5.1.2",
     "semver": "^7.3.7",
