@@ -2,6 +2,17 @@ import Score from './helpers/constructor';
 import getScoreAndName from './API/getAPI';
 import postScoreAndName from './API/postAPI';
 
+const removeWarning = (selector, time) => {
+  setTimeout(() => {
+    document.querySelector(selector).remove();
+  }, time);
+};
+
+const clearInput = (input) => {
+  input.value = '';
+  input.focus();
+};
+
 const addScores = async () => {
   const scoreList = document.querySelector('.score-list');
   const scores = await getScoreAndName().then((result) => result);
@@ -41,11 +52,8 @@ const addScore = () => {
         </div>
       `,
       );
-      setTimeout(() => {
-        document.querySelector('.remove').remove();
-      }, 3000);
-      user.value = '';
-      user.focus();
+      removeWarning('.remove', 3000);
+      clearInput(user);
       return;
     }
     if (/^[a-zA-Z]+$/.test(score.value)) {
@@ -61,11 +69,8 @@ const addScore = () => {
         </div>
       `,
       );
-      setTimeout(() => {
-        document.querySelector('.remove').remove();
-      }, 3000);
-      score.value = '';
-      score.focus();
+      removeWarning('.remove', 3000);
+      clearInput(score);
       return;
     }
     form.insertAdjacentHTML(
@@ -80,10 +85,7 @@ const addScore = () => {
         </div>
       `,
     );
-    setTimeout(() => {
-      document.querySelector('.remove').remove();
-    }, 3000);
-
+    removeWarning('.remove', 3000);
     const addScore = new Score(user.value, score.value);
     await postScoreAndName(addScore);
     user.value = '';
