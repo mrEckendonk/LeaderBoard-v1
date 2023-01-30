@@ -160,7 +160,7 @@
     "get-stdin": "^9.0.0",
     "get-symbol-description": "^1.0.0",
     "glob": "^7.2.3",
-    "glob-parent": "^5.1.2",
+    "glob-parent": "^6.0.2",
     "global-modules": "^2.0.0",
     "global-prefix": "^3.0.0",
     "globals": "^11.12.0",
