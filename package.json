@@ -267,7 +267,7 @@
     "parse-entities": "^2.0.0",
     "parse-json": "^6.0.2",
     "path-browserify": "^1.0.1",
-    "path-exists": "^3.0.0",
+    "path-exists": "^5.0.0",
     "path-is-absolute": "^1.0.1",
     "path-key": "^3.1.1",
     "path-parse": "^1.0.7",
