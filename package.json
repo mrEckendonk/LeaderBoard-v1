@@ -216,7 +216,7 @@
     "js-tokens": "^4.0.0",
     "js-yaml": "^3.14.1",
     "jsdom": "^20.0.0",
-    "jsesc": "^2.5.2",
+    "jsesc": "^3.0.2",
     "json-parse-even-better-errors": "^3.0.0",
     "json-schema-traverse": "^0.4.1",
     "json-stable-stringify-without-jsonify": "^1.0.1",
