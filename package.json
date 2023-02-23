@@ -358,7 +358,7 @@
     "validate-npm-package-license": "^3.0.4",
     "vfile": "^4.2.1",
     "vfile-message": "^2.0.4",
-    "which": "^2.0.2",
+    "which": "^3.0.0",
     "which-boxed-primitive": "^1.0.2",
     "word-wrap": "^1.2.3",
     "wrappy": "^1.0.2",
