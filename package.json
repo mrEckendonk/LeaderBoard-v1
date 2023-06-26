@@ -107,7 +107,7 @@
     "decamelize": "^6.0.0",
     "decamelize-keys": "^1.1.0",
     "deep-is": "^0.1.4",
-    "define-properties": "^1.1.4",
+    "define-properties": "^1.2.0",
     "dir-glob": "^3.0.1",
     "doctrine": "^3.0.0",
     "dom-serializer": "^0.2.2",
