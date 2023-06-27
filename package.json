@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/mrEckendonk/LeaderBoard-v1#readme",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "autoprefixer": "^10.4.7",
