@@ -54,7 +54,7 @@
     "tailwindcss": "^3.2.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^4.10.0",
+    "webpack-cli": "^5.1.4",
     "webpack-dashboard": "^3.3.7",
     "webpack-dev-middleware": "^5.3.3",
     "webpack-dev-server": "^4.11.1",
