@@ -238,7 +238,7 @@
     "mdast-util-to-markdown": "^0.6.5",
     "mdast-util-to-string": "^2.0.0",
     "mdn-data": "^2.0.32",
-    "meow": "^9.0.0",
+    "meow": "^12.0.1",
     "merge2": "^1.4.1",
     "micromark": "^2.11.4",
     "micromatch": "^4.0.5",
