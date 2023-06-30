@@ -248,7 +248,7 @@
     "minimist-options": "^4.1.0",
     "ms": "^2.1.2",
     "natural-compare": "^1.4.0",
-    "node-releases": "^2.0.5",
+    "node-releases": "^2.0.12",
     "normalize-package-data": "^5.0.0",
     "normalize-range": "^0.1.2",
     "normalize-selector": "^0.2.0",
