@@ -181,7 +181,7 @@
     "import-fresh": "^3.3.0",
     "import-lazy": "^4.0.0",
     "imurmurhash": "^0.1.4",
-    "indent-string": "^4.0.0",
+    "indent-string": "^5.0.0",
     "inflight": "^1.0.6",
     "inherits": "^2.0.4",
     "ini": "^4.1.1",
