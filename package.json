@@ -367,7 +367,7 @@
     "yaml": "^1.10.2",
     "yargs-parser": "^20.2.9",
     "zlib": "^1.0.5",
-    "zwitch": "^1.0.5"
+    "zwitch": "^2.0.4"
   },
   "keywords": []
 }
