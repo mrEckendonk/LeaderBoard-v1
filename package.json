@@ -163,7 +163,7 @@
     "glob-parent": "^6.0.2",
     "global-modules": "^2.0.0",
     "global-prefix": "^3.0.0",
-    "globals": "^11.12.0",
+    "globals": "^13.23.0",
     "globby": "^11.1.0",
     "globjoin": "^0.1.4",
     "gonzales-pe": "^4.3.0",
