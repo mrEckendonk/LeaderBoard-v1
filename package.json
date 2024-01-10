@@ -343,7 +343,7 @@
     "trough": "^1.0.5",
     "tsconfig-paths": "^4.2.0",
     "type-check": "^0.4.0",
-    "type-fest": "^0.20.2",
+    "type-fest": "^4.9.0",
     "typedarray-to-buffer": "^3.1.5",
     "unbox-primitive": "^1.0.2",
     "unified": "^9.2.2",
