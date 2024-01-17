@@ -41,7 +41,7 @@
     "husky": "^8.0.3",
     "mini-css-extract-plugin": "^2.7.6",
     "mkdirp": "^1.0.4",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.33",
     "postcss-loader": "^7.0.2",
     "postcss-preset-env": "^9.3.0",
     "sass": "^1.53.0",
