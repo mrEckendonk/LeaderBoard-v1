@@ -168,7 +168,7 @@
     "globjoin": "^0.1.4",
     "gonzales-pe": "^4.3.0",
     "hard-rejection": "^2.1.0",
-    "has": "^1.0.3",
+    "has": "^1.0.4",
     "has-bigints": "^1.0.2",
     "has-flag": "^3.0.0",
     "has-property-descriptors": "^1.0.0",
