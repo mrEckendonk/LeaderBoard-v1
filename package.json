@@ -365,7 +365,7 @@
     "write-file-atomic": "^3.0.3",
     "yallist": "^4.0.0",
     "yaml": "^1.10.2",
-    "yargs-parser": "^20.2.9",
+    "yargs-parser": "^21.1.1",
     "zlib": "^1.0.5",
     "zwitch": "^2.0.4"
   },
