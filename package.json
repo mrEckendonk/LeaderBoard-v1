@@ -364,7 +364,7 @@
     "wrappy": "^1.0.2",
     "write-file-atomic": "^3.0.3",
     "yallist": "^4.0.0",
-    "yaml": "^1.10.2",
+    "yaml": "^2.3.4",
     "yargs-parser": "^21.1.1",
     "zlib": "^1.0.5",
     "zwitch": "^2.0.4"
