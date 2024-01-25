@@ -143,7 +143,7 @@
     "fast-glob": "^3.2.11",
     "fast-json-stable-stringify": "^2.1.0",
     "fast-levenshtein": "^2.0.6",
-    "fastest-levenshtein": "^1.0.12",
+    "fastest-levenshtein": "^1.0.16",
     "fastq": "^1.13.0",
     "file-entry-cache": "^6.0.1",
     "fill-range": "^7.0.1",
