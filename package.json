@@ -339,7 +339,7 @@
     "text-table": "^0.2.0",
     "to-fast-properties": "^2.0.0",
     "to-regex-range": "^5.0.1",
-    "trim-newlines": "^3.0.1",
+    "trim-newlines": "^5.0.0",
     "trough": "^1.0.5",
     "tsconfig-paths": "^4.2.0",
     "type-check": "^0.4.0",
