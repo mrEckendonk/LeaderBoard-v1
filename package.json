@@ -116,7 +116,7 @@
     "domutils": "^1.7.0",
     "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
-    "electron-to-chromium": "^1.4.177",
+    "electron-to-chromium": "^1.4.649",
     "emoji-regex": "^8.0.0",
     "enquirer": "^2.3.6",
     "entities": "^1.1.2",
