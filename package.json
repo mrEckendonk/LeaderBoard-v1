@@ -296,7 +296,7 @@
     "redent": "^3.0.0",
     "regexp.prototype.flags": "^1.4.3",
     "regexpp": "^3.2.0",
-    "remark": "^13.0.0",
+    "remark": "^15.0.1",
     "remark-parse": "^10.0.1",
     "remark-stringify": "^9.0.1",
     "repeat-string": "^1.6.1",
