@@ -326,7 +326,7 @@
     "string.prototype.trimend": "^1.0.5",
     "string.prototype.trimstart": "^1.0.7",
     "strip-ansi": "^6.0.1",
-    "strip-bom": "^3.0.0",
+    "strip-bom": "^5.0.0",
     "strip-indent": "^3.0.0",
     "strip-json-comments": "^3.1.1",
     "style-search": "^0.1.0",
