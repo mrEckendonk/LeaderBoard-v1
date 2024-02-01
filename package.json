@@ -92,7 +92,7 @@
     "character-entities": "^2.0.2",
     "character-entities-legacy": "^1.1.4",
     "character-reference-invalid": "^1.1.4",
-    "clone-regexp": "^2.2.0",
+    "clone-regexp": "^3.0.0",
     "color-convert": "^1.9.3",
     "color-name": "^1.1.3",
     "compression": "^1.7.4",
