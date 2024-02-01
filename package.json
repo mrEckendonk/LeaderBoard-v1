@@ -349,7 +349,7 @@
     "unified": "^9.2.2",
     "unist-util-find-all-after": "^3.0.2",
     "unist-util-is": "^4.1.0",
-    "unist-util-stringify-position": "^3.0.2",
+    "unist-util-stringify-position": "^4.0.0",
     "update-browserslist-db": "^1.0.4",
     "uri-js": "^4.4.1",
     "util-deprecate": "^1.0.2",
